@@ -13,7 +13,7 @@ namespace CW2
 
         public int GetHashCode(Student obj)
         {
-            return StringComparer.CurrentCultureIgnoreCase.GetHashCode($"{obj.Imie}, {obj.Nazwisko}, {obj.NazwaStudiow}, {obj.TypStudiow}, {obj.Index}, {obj.DataUrodzenia}, {obj.Email}, {obj.ImieMatki}, {obj.ImieOjca}");
+            return StringComparer.CurrentCultureIgnoreCase.GetHashCode($"{obj.Imie}, {obj.Nazwisko}, {obj.studies}, {obj.Index}, {obj.DataUrodzenia}, {obj.Email}, {obj.ImieMatki}, {obj.ImieOjca}");
         }
     }
 }

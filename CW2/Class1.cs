@@ -1,26 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Newtonsoft.Json;
 namespace CW2
 {
-    class Student
+    public class Student
     {
+        [JsonProperty("imie")]
         public string Imie;
+        [JsonProperty("nazwisko")]
         public string Nazwisko;
-        public string NazwaStudiow;
-        public string TypStudiow;
+        [JsonProperty("Studies")]
+        public Studies studies;
+        [JsonProperty("Index")]
         public string Index;
+        [JsonProperty("DataUrodzenia")]
         public string DataUrodzenia;
+        [JsonProperty("Email")]
         public string Email;
+        [JsonProperty("ImieMatki")]
         public string ImieMatki;
+        [JsonProperty("ImieOjca")]
         public string ImieOjca;
+        
 
-        public Student(string imie, string nazwisko, string nazwaStudiow, string typStudiow, string index, string dataUrodzenia, string email, string imieMatki, string imieOjca)
+        public Student(string imie, string nazwisko, Studies studies, string index, string dataUrodzenia, string email, string imieMatki, string imieOjca)
         {
             Imie = imie;
             Nazwisko = nazwisko;
-            NazwaStudiow = nazwaStudiow;
+            this.studies = studies;
             Index = index;
             DataUrodzenia = dataUrodzenia;
             Email = email;
@@ -29,7 +37,7 @@ namespace CW2
         }
         public override  string ToString()
         {
-            return Imie + " " + Nazwisko + " " + NazwaStudiow + " " + TypStudiow + " " + Index + " " + DataUrodzenia + " " + Email + " " + ImieMatki + " " + ImieOjca; 
+            return Imie + " " + Nazwisko + "  " + Index + " " + DataUrodzenia + " " + Email + " " + ImieMatki + " " + ImieOjca; 
         }
     }
 }
